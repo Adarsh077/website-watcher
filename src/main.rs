@@ -17,7 +17,7 @@ async fn get_result_html() -> Option<String> {
 async fn send_notification() -> Result<(), reqwest::Error> {
     let client = reqwest::Client::new();
     client
-        .post("https://ntfy.sh/mumresult-test")
+        .post("https://ntfy.sh/mumresult")
         .body("http://www.mumresults.in/F24/1T01238.pdf")
         .send()
         .await?;
