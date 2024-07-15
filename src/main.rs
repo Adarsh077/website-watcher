@@ -26,7 +26,7 @@ async fn send_notification() -> Result<(), reqwest::Error> {
 }
 
 #[tokio::main]
-async fn main() -> mongodb::error::Result<()> {
+async fn main() -> Result<(), ()> {
     let maybe_html = get_result_html().await;
 
     match maybe_html {
